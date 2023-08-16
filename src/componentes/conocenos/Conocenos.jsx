@@ -1,8 +1,11 @@
-import React from 'react'
 
-function Conocenos() {
+const Conocenos = () => {
+  
+
   return (
-    <div>Conocenos</div>
+    <div>
+      
+      </div>
   )
 }
 

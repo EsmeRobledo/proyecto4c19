@@ -9,7 +9,7 @@ function Navegacion() {
     <div className='contendor'>
         <ul className='navMenu'>
           <li><NavLink className="link-menu" to="/">Home</NavLink></li>
-          <li><NavLink className="link-menu" to="/Conocenos">Conocenos</NavLink></li>
+          <li><NavLink className="link-menu" to="/conocenos">Conocenos</NavLink></li>
           <li><NavLink className="link-menu" to="/Menu">Menu</NavLink></li>
           <li><NavLink className="link-menu" to="/Reservas">Reservaciones</NavLink></li>
         </ul>

@@ -6,7 +6,9 @@ function Home() {
     <div>
       <div className='contenedor'>
         <h1>Home</h1>
-        </div></div>
+        </div>
+        
+        </div>
   )
 }
 
