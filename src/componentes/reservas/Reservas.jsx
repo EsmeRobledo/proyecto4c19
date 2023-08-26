@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useLayoutEffect, useState } from 'react';
 import Form from 'react-bootstrap/Form';
-import TablaReservas from './TablaReservas';
 import './reservas.css'
-import { Button } from 'react-bootstrap';
-
+import { Button, Table } from 'react-bootstrap';
+import { collection, addDoc, onSnapshot } from 'firebase/firestore';
+import db from '../../servicios/firebase';
+import swal from 'sweetalert';
 
 function Reservas() {
+    const [reservas, setReservas] = useState([]);
     const [form, setForm] = useState({
         nombre: "",
         telefono: "",
@@ -18,21 +19,25 @@ function Reservas() {
     function onSave(event) {
         /*Guardar la reservacion*/
         event.preventDefault();
-        console.log("Este es el formulario a guardar", form);
-    }
+       addDoc(collection(db,'reserva'), form).
+       then(resp => swal("Oops!", "Something went wrong!", "error")).
+       catch(err => swal("Oops!", "Something went wrong!", "error"))
+     }
 
     function onChange(event) {
-        console.log(event.target);
-        console.log(event.target.name);
-        console.log(event.target.value);
         setForm({ ...form, [event.target.name]: event.target.value });
     }
 
-    function muestraReservas() {
-        console.log("Log Hola");
+     const muestraReservas = async() => {
+        onSnapshot(collection(db,'reserva'),(snapshot) =>{
+            const list = [];
+            snapshot.forEach(doc => list.push({...doc.data(), id: doc.id}))
+            setReservas(list);
+        })
+        console.log(reservas);
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         muestraReservas();
     }, [])
 
@@ -65,7 +70,34 @@ function Reservas() {
                         </Form>
                     </div>
                 </div>
-                {/* <TablaReservas/> */}
+              <div className='Column1'>
+                <Table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Telefono</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Comensales</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        { console.log(reservas)}
+                        {
+                            reservas.map((reserva,index) => {
+                         return(
+                                <tr key={index}>
+                                    <td>{reserva.nombre}</td>
+                                    <td>{reserva.telefono}</td>
+                                    <td>{reserva.fecha}</td>
+                                    <td>{reserva.hora}</td>
+                                    <td>{reserva.comensales}</td>
+                                </tr>
+                            )})
+                        }
+                    </tbody>
+                </Table>
+              </div>
             </div>
         </>
     )

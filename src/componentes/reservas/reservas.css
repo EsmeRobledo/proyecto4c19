@@ -1,14 +1,9 @@
 .formContent{
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .form-reserva{
@@ -34,4 +29,14 @@
 .formButton:hover {
     background: rgb(127, 109, 170);
     color: rgb(203, 196, 196);
+}
+
+.wrap{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Column1{
+    flex-grow: 1;
 }
