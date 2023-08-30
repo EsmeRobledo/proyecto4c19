@@ -1,11 +1,16 @@
-.formContent{
+.wrap{
+    
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: aliceblue;
 }
-
+.formContent, .Column{
+    margin-top: 40px;
+}
 .form-reserva{
     border: 2px solid black;
     padding: 35px;
@@ -15,28 +20,31 @@
     flex-direction: column;
 }
 
-.formButton{
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
+.tabla-reserva{
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 25px;
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.formButton:hover {
-    background: rgb(127, 109, 170);
-    color: rgb(203, 196, 196);
+.tabla-reserva td, .tabla-reserva th {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+.tabla-reserva tr:nth-child(even){
+    background-color: #f2f2f2;
 }
 
-.wrap{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+.tabla-reserva tr:hover {
+    background-color: #ddd;
 }
 
-.Column1{
-    flex-grow: 1;
+.tabla-reserva th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: rgb(8, 138, 237);
+  color: whitesmoke;
 }

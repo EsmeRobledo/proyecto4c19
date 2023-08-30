@@ -9,7 +9,7 @@ border: none;
 }
 
 .contendor{
-    background-color: black;
+    background-color: rgb(62, 108, 71);
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -31,4 +31,8 @@ border: none;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+}
+
+.logo-restaurant{
+  width: 50px;  
 }

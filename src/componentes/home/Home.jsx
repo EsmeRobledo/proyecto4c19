@@ -1,14 +1,12 @@
 import React from 'react'
 import './home.css'
+import Presentacion from '../presentacion/Presentacion'
 
 function Home() {
   return (
-    <div>
-      <div className='contenedor'>
-        <h1>Home</h1>
-        </div>
-        
-        </div>
+    <div className='contenedor-home'>
+    <Presentacion />
+    </div>
   )
 }
 
