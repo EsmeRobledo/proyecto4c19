@@ -18,7 +18,7 @@ function Presentacion() {
 
                         <Carousel.Caption>
 
-                            <h3>First slide label</h3>
+                            <h3>Comida India</h3>
 
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
 
@@ -32,7 +32,7 @@ function Presentacion() {
 
                         <Carousel.Caption>
 
-                            <h3>Second slide label</h3>
+                            <h3>Pizza a la leña</h3>
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
@@ -46,20 +46,13 @@ function Presentacion() {
 
                         <Carousel.Caption>
 
-                            <h3>Third slide label</h3>
-
+                            <h3>Pizza horneada</h3>
                             <p>
-
                                 Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-
                             </p>
-
                         </Carousel.Caption>
-
                     </Carousel.Item>
-                   
                 </Carousel>
-
             </div>
 
 

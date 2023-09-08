@@ -1,11 +1,11 @@
 .contenedor-home{
-
     display: flex;
-
     justify-content: center;
+    padding: 0  8%;
 
-    /* border: solid blue; */
+}
 
-    padding: 5% 10%;
-
+.contenedeor-conocenos{
+        display: flex;
+        justify-content: center;
 }

@@ -16,7 +16,7 @@ function Menu() {
        
         {productos.map( (producto, index) => {
           return(
-            <Card className='card-menu' key={index} style={{ width: '18rem' }}>
+            <Card className='card-menu' key={index} style={{ width: '18rem', background: 'transparent' }}>
             <Card.Img variant="top" src={producto.img} />
             <Card.Body>
               <Card.Title>{producto.nombre}</Card.Title>
